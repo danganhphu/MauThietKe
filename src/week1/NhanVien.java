@@ -7,6 +7,7 @@ public class NhanVien {
     double tienLuong;
     int tongGioLam;
 
+    //constructor
     public NhanVien() {
         ten = "Anh Phú";
         tuoi = 22;
