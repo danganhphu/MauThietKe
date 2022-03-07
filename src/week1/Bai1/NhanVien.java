@@ -1,4 +1,4 @@
-package week1;
+package week1.Bai1;
 
 public class NhanVien {
     String ten;

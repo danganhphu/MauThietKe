@@ -1,9 +1,7 @@
-package week1;
-import javax.swing.JOptionPane;
+package week1.Bai1;
 
 public class Bai1 {
     public static void main(String[] args) {
-        //Bài tập 1
         NhanVien nv1 = new NhanVien();
         NhanVien nv2 = new NhanVien("Yến Nhi", (byte) 23, "Khánh Hòa",  8.7, 77);
         System.out.println("Thông tin nhân viên 1");
