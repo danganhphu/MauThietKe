@@ -3,6 +3,9 @@ package stratery.bt_stratery_pattern.bai1;
 public class Context {
     private ITinh tinhToan;
 
+    public Context() {
+
+    }
     public Context(ITinh tinhToan) {
         this.tinhToan = tinhToan;
     }

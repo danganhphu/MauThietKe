@@ -46,9 +46,7 @@ public class GioHang {
             System.out.println("\nDanh sách hàng hóa trong giỏ hàng rỗng");
         else {
             System.out.println("\n-----------Danh sách hàng hóa trong giỏ hàng-------------");
-            for (HangHoa hh : lsHH) {
-                hh.getThongTin();
-            }
+            lsHH.forEach(HangHoa::getThongTin);
         }
     }
 

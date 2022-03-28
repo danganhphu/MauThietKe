@@ -8,52 +8,53 @@ import java.util.List;
 import java.util.Scanner;
 
 public class QuanLySinhVien {
-    List<SinhVien> lsSV = new ArrayList<SinhVien>();
+    List<SinhVien> lsSV = new ArrayList<>();
     static ISoSanh<SinhVien> soSanh;
 
 
-    public ISoSanh<SinhVien> getSoSanh() {
-        return soSanh;
+    public void setSoSanh(ISoSanh<SinhVien> value) {
+        soSanh = value;
     }
 
-    public void setSoSanh(ISoSanh<SinhVien> soSanh) {
-        this.soSanh = soSanh;
+    public List<SinhVien> getLsSV() {
+        return lsSV;
+    }
+    public QuanLySinhVien() {
+        lsSV = new ArrayList<SinhVien>();
     }
 
-    
-    Scanner scan = new Scanner(System.in);
-    byte sl;
-    public QuanLySinhVien(byte sl) {
-        this.sl = sl;
-        for (int i = 0; i < sl; i++) {
-            System.out.print("Nhập họ tên sv thứ " + (i + 1) + ": ");
-            String hoTen = scan.nextLine();
+//    Scanner scan = new Scanner(System.in);
+//    byte sl;
+//    public QuanLySinhVien(byte sl) {
+//        this.sl = sl;
+//        for (int i = 0; i < sl; i++) {
+//            System.out.print("Nhập họ tên sv thứ " + (i + 1) + ": ");
+//            String hoTen = scan.nextLine();
+//
+//            SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+//            Date ngaySinh = null;
+//            try {
+//
+//                System.out.print("Nhập ngày sinh: ");
+//                ngaySinh = df.parse(scan.nextLine());
+//            } catch (ParseException ex) {
+//                System.out.println("Nhập sai định dạng");
+//            }
+//
+//            System.out.print("Nhập điểm trung bình: ");
+//            float diemTB = scan.nextFloat();
+//            scan.nextLine();
+//
+//            SinhVien sv = new SinhVien(hoTen, ngaySinh, diemTB);
+//            lsSV.add(sv);
+//        }
 
-            SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
-            Date ngaySinh = null;
-            try {
-                System.out.print("Nhập ngày sinh: ");
-                ngaySinh = df.parse(scan.nextLine());
-            } catch (ParseException ex) {
-                System.out.println("Nhập sai định dạng");
+//    }
 
-            }
-
-            System.out.print("Nhập điểm trung bình: ");
-            float diemTB = scan.nextFloat();
-            scan.nextLine();
-
-            SinhVien sv = new SinhVien(hoTen, ngaySinh, diemTB);
-            lsSV.add(sv);
-        }
-
-    }
-
-    public static int soSanh(SinhVien sv1, SinhVien sv2) {
-        return soSanh.soSanh(sv1, sv2);
-    }
     public void sapXep() {
-        lsSV.sort(QuanLySinhVien::soSanh);
+        lsSV.sort((o1, o2) -> {
+            return soSanh.soSanh(o1, o2);
+        });
     }
 
     public void inDS() {

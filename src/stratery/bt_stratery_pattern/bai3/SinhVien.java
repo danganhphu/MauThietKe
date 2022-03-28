@@ -1,21 +1,17 @@
 package stratery.bt_stratery_pattern.bai3;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class SinhVien {
     private String hoTen;
     private Date ngaySinh;
+    private float diemTB;
 
     public SinhVien(String hoTen, Date ngaySinh, float diemTB) {
         this.hoTen = hoTen;
         this.ngaySinh = ngaySinh;
         this.diemTB = diemTB;
-    }
-
-    private float diemTB;
-
-    public SinhVien() {
-
     }
 
     public String getHoTen() {
