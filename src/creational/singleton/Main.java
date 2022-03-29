@@ -3,14 +3,16 @@ package creational.singleton;
 public class Main {
 
     public static void main(String[] args) {
-        User user = new User();
-        user.vote(Candidate.JoeBiden);
-        User user2 = new User();
-        user2.vote(Candidate.JoeBiden);
-        User user3 = new User();
-        user3.vote(Candidate.DonaldTrump);
-        Election e = Election.createInstance();
-        System.out.println(e.joeBiden);
-        System.out.println(e.donaldJump);
+
+        User u1 = new User("Phu");
+        u1.vote(Candidate.JoeBiden);
+
+        User u2 = new User("nhi");
+        u2.vote(Candidate.DonaldTrump);
+        u1.vote(Candidate.JoeBiden);
+
+
+        System.out.println("Joebiden: " +Election.createInstance().getJoeBiden());
+        System.out.println("DonalTrump: " +Election.createInstance().getDonaldJump());
     }
 }

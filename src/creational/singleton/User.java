@@ -1,14 +1,14 @@
 package creational.singleton;
 
 public class User {
+    String name;
 
-    public User() {
+    public User(String name) {
+        this.name = name;
     }
 
     public void vote(Candidate c){
         Election election = Election.createInstance();
-        if(c == Candidate.DonaldTrump)
-            election.donaldJump++;
-        else election.joeBiden++;
+        election.vote(c, this);
     }
 }
