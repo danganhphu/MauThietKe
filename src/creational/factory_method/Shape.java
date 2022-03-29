@@ -1,32 +1,27 @@
 package creational.factory_method;
 
 public abstract class Shape {
-    private String brush;
-    private String paper;
-    private String frame;
-
-    public String getBrush() {
-        return brush;
-    }
+    protected String brush;
 
     public void setBrush(String brush) {
         this.brush = brush;
-    }
-
-    public String getPaper() {
-        return paper;
     }
 
     public void setPaper(String paper) {
         this.paper = paper;
     }
 
-    public String getFrame() {
-        return frame;
-    }
-
     public void setFrame(String frame) {
         this.frame = frame;
+    }
+
+    protected String paper;
+    protected String frame;
+
+    public Shape() {
+        this.brush = "pencil";
+        this.paper = "A2";
+        this.frame = "a frame";
     }
 
     public abstract String draw();
