@@ -7,7 +7,7 @@ public class Rectangle extends Shape{
         super();
     }
 
-    public static Rectangle getInstance() {
+    public synchronized static Rectangle getInstance() {
         if (instance == null)
             instance = new Rectangle();
         return instance;

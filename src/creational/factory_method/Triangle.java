@@ -7,7 +7,7 @@ public class Triangle extends Shape{
         super();
     }
 
-    public static Triangle getInstance() {
+    public synchronized static Triangle getInstance() {
         if (instance == null)
             instance = new Triangle();
         return instance;

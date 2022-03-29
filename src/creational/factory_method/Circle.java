@@ -7,7 +7,7 @@ public class Circle extends Shape{
         super();
     }
 
-    public static Circle getInstance() {
+    public synchronized static Circle getInstance() {
         if (instance == null)
             instance = new Circle();
         return instance;
