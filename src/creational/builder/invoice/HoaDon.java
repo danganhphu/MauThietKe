@@ -10,6 +10,7 @@ public class HoaDon {
         this.hoaDonHeader = hoaDonHeader;
         this.dsCthd = dsCthd;
     }
+
     public void showInfo(){
         System.out.println(hoaDonHeader.toString());
         for(CTHD ct: dsCthd)
